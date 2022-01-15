@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <main>
+      <div class="header">
+        <h1><mark>Pure Quiz App</mark></h1>
+      </div>
+
+      <div class="main">
+        <div class="quiz" style="display: none;">quiz</div>
+
+        <div class="settings">
+          <h3 style="text-align: center;">Set up your Quiz!</h3>
+          <label for="category">Category</label>
+          <select name="category" id="category">
+            <option value="9">General Knowledge</option>
+            <option value="27">Animals</option>
+            <option value="15">Video Games</option>
+            <option value="23">History</option>
+            <option value="21">Sports</option>
+          </select>
+          <div>
+            <label for="difficulty">Difficulty</label>
+            <label class="container" style="display: inline; margin-left: 30px;">Easy
+              <input type="radio" name="radio" id="easy">
+              <span class="checkmark" style="margin-top: 2px;"></span>
+            </label>
+            <label class="container" style="display: inline; margin-left: 30px;">Medium
+              <input type="radio" name="radio" id="medium">
+              <span class="checkmark" style="margin-top: 2px;"></span>
+            </label>
+            <label  class="container" style="display: inline; margin-left: 30px;">Hard
+              <input type="radio" name="radio" id="hard">
+              <span class="checkmark" style="margin-top: 2px;"></span>
+            </label>
+          </div>
+          <div>
+            <label for="questions">Number of questions</label>
+            <input name="questions" id="questions" type="text" pattern="[0-9]*" />
+          </div>  
+          <button id="start" class="submit">Start Quiz</button>
+        </div>  
+      </div>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
