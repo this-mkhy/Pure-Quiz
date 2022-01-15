@@ -9,16 +9,47 @@
   </head>
 
   <body>
-    <main>
+    <main style="text-align: center;">
       <div class="header">
         <h1><mark>Pure Quiz App</mark></h1>
       </div>
 
       <div class="main">
-        <div class="quiz" style="display: none;">quiz</div>
+
+        <div class="final" style="display: none;">
+          <h3>You answered all of the questions!</h3>
+          <p>Score: </p><p class="score"></p>
+          <h4>Do you want to try it again?</h4>
+          <button id="again" class="submit">Again</button>
+        </div>
+
+        <div class="quiz" style="display: none;">
+          <div class="count">
+            <p class="current">0</p><p style="margin-left:40px"> / </p><p class="total"></p>
+          </div>
+
+          <h3 id="question"></h3>
+          <label id="a1" class="container">
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label id="a2" class="container">
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label id="a3" class="container">
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label id="a4" class="container">
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <button id="next" class="submit">Submit</button>
+        </div>
 
         <div class="settings">
-          <h3 style="text-align: center;">Set up your Quiz!</h3>
+          <h3>Set up your Quiz!</h3>
           <label for="category">Category</label>
           <select name="category" id="category">
             <option value="9">General Knowledge</option>
