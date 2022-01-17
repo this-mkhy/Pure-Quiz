@@ -9,7 +9,7 @@ class Question {
             document.querySelector('#a3'),
             document.querySelector('#a4'),
         ];
-    
+        
         //get the correct answer
         this.correctAnswer = question.correct_answer;
         this.question = question.question;

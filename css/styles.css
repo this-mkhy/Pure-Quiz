@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #245e7a;
+    --secondary-color: #000000;
+    --tertiary-color: rgb(255, 255, 255);
+    --quaternary-color: #55505C;
+    --hover-color: #4e616b;
+    --shadow-color:rgba(0, 0, 0, 0.4);
+    --font-style: 'Questrial';
+  }
+  
+  body {
+    font-family: var(--font-style), 'Ranchers', cursive;
+    background-color: var(--secondary-color);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--primary-color);
+  }
+  
+  .mt30 {
+    margin-top: 30px;
+  }
+  
+  .header {
+    padding: 15px;
+  }
+  
+  .main {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .settings {
+  
+    z-index: 1;
+  }
+  
+  .final {
+    /* visibility: hidden; */
+    z-index: 2;
+  }
+  
+  .final p {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .final h4 {
+    font-size: 33px;
+    text-align: center;
+  }
+  
+  .quiz  {
+    /* visibility: hidden; */
+    z-index: 0;
+  }
+  
+  #questions {
+    font-size: 20px;
+    font-family: var(--font-style), 'Ranchers', cursive;
+    font-weight: 600;
+    line-height: 1.3;
+    color: rgb(255, 255, 255);
+    background-color: var(--primary-color);
+    appearance: none;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 30px;
+    outline: none;
+    text-align: center;
+    width: 120px;
+  }
+  .settings select {
+    font-size: 20px;
+    font-family: var(--font-style), 'Ranchers', cursive;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    background-color: var(--primary-color);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 20px;
+    outline: none;
+    text-align: center;
+  }
+  
+  .settings select::-ms-expand {
+    display: none;
+  }
+  
+  .settings select:hover {
+    border-color: var(--hover-color);
+  }
+  
+  .settings select:focus {
+    border-color: var(--hover-color);
+  }
+  
+  .settings select option {
+    /* font-weight: bolder; */
+    font-family: var(--font-style), 'Ranchers', sans-serif;
+  }
+  
+  .settings label {
+    font-size: 25px;
+    margin-right: 16px;
+  }
+  .settings label:hover {
+    background-color: #ffffff;
+  }
+ 
+
+  .quiz, .settings, .final {
+    position: absolute;
+    padding: 0px 35px 35px 35px;
+    max-width: 560px;
+    background-color: var(--tertiary-color);
+    border-radius: 7px;
+    -webkit-box-shadow: 10px 10px 3px -4px var(--shadow-color);
+    -moz-box-shadow: 10px 10px 3px -4px var(--shadow-color);
+    box-shadow: 10px 10px 5px -4px var(--shadow-color);
+  }
+  
+  h3 {
+    display: block;
+    width: 550px;
+    font-size: 35px;
+    font-weight: 350;
+    word-wrap: break-word;
+  }
+  
+  .submit {
+    width: 100%;
+    color: white;
+    background-color: var(--primary-color);
+    font-family: var(--font-style), 'Ranchers', cursive;
+    outline: none;
+    border: none;
+    height: 50px;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+  }
+  
+  .submit:hover {
+    background-color: #131109;
+    cursor: pointer;
+    color: #fdfcf5;
+  }
+  
+  /* The container */
+  .count {
+    display: block;
+    left: 75%;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 100px;
+    cursor: pointer;
+  }
+  
+  .count p {
+    position: absolute;
+    font-size: 35px;
+    
+  }
+  
+  .total {
+    margin-left: 50px;
+  }
+  
+  /* The container */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .container:hover {
+      background-color: rgb(238, 255, 4);
+      border-radius: 5px; 
+    }
+    
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(199, 196, 196);
+    border-radius: 30%;
+  }
+  
+  /* On mouse-over, add a yellow background color */
+  .container:hover input ~ .checkmark {
+    background-color: #FAF33E;
+  }
+  
+  /* When the radio button is checked, add a quaternary background */
+  .container input:checked ~ .checkmark {
+    background-color: var(--quaternary-color);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  

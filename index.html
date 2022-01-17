@@ -23,7 +23,7 @@
           <button id="again" class="submit">Again</button>
         </div>
 
-        <div class="quiz" style="display: none;">
+        <div class="quiz" style="display: none;" tabindex="1">
           <div class="count">
             <p class="current">0</p><p style="margin-left:40px"> / </p><p class="total"></p>
           </div>
@@ -58,7 +58,7 @@
             <option value="23">History</option>
             <option value="21">Sports</option>
           </select>
-          <div>
+          <div class="mt30">
             <label for="difficulty">Difficulty</label>
             <label class="container" style="display: inline; margin-left: 30px;">Easy
               <input type="radio" name="radio" id="easy">
@@ -73,7 +73,7 @@
               <span class="checkmark" style="margin-top: 2px;"></span>
             </label>
           </div>
-          <div>
+          <div class="mt30">
             <label for="questions">Number of questions</label>
             <input name="questions" id="questions" type="text" pattern="[0-9]*" />
           </div>  
