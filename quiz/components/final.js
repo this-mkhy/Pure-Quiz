@@ -17,7 +17,7 @@ class Final {
     // }
 
     render(countCorrectAnswers, allTotalAmount) {
-      this.scoreElement.innerHTML = `You answered ${countCorrectAnswers} out of ${allTotalAmount} correct!`;
+      this.scoreElement.innerHTML = `<mark> You answered ${countCorrectAnswers} out of ${allTotalAmount} correct!</mark>`;
     }
   }
   

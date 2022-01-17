@@ -18,6 +18,8 @@ class Settings {
     this.startButton.addEventListener('click', this.startQuizApp.bind(this));
   }
 
+  //get the data to start the app
+  //send request to our api to get amount of questions, categoryId and difficulty to start the app 
   async startQuizApp() {
     try {
       const amount = this.getAmount();
@@ -29,7 +31,10 @@ class Settings {
       let data = await this.fetchData(url);
       //console.log(data)
 
+      //if we get a data, toggle the visibility of our dom
       this.toggleVisibility();
+
+      //send our data (quizElement, amount, results which is all questions) to the Quiz class
       this.quiz = new Quiz(this.quizElement, amount, data.results);
 
     } catch (error) {
@@ -38,6 +43,7 @@ class Settings {
     
   } 
 
+  //hide the setting and visible the quiz
   toggleVisibility() {
     this.quizElement.style.display = 'block';
     //this.quizElement.style.visibility = 'visible';
