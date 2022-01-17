@@ -21,7 +21,17 @@ class Question {
             ...question.incorrect_answers
         ]);
     }
-
+    
+    shuffleAnswers(answers) {
+        for (let i = answers.length - 1; i > 0; i--){
+          const j = Math.floor(Math.random() * i)
+          const temp = answers[i]
+          answers[i] = answers[j]
+          answers[j] = temp
+        }
+        return answers;
+      }
+    
     //check answers
     answer(checkedElement) {
        this.isCorrect = (checkedElement[0].textContent === this.correctAnswer) ? true : false;

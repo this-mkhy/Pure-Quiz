@@ -4,13 +4,17 @@ class Final {
       this.againButton = document.querySelector('#again');
   
       this.render(correctAnswers, totalAmount);
-      this.againButton.addEventListener('click', startAgain());
+      
+      //reload the page
+      this.againButton.addEventListener('click', location.reload.bind(location));
+      //this.againButton.addEventListener('click', startAgain);
+
     }
     
     //reload the page
-    startAgain = () => {
-        location.reload()
-    }
+    // startAgain = () => {
+    //     location.reload()
+    // }
 
     render(countCorrectAnswers, allTotalAmount) {
       this.scoreElement.innerHTML = `You answered ${countCorrectAnswers} out of ${allTotalAmount} correct!`;
